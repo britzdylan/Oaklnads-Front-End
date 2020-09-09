@@ -4,7 +4,7 @@ export default function Layout({ children }) {
     return (
         <>
             <Header />
-            <main>{children}</main>
+            <main className="font-Montserrat xl:max-w-6xl mx-auto">{children}</main>
         </>
     )
 }
