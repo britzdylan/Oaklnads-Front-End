@@ -3,6 +3,8 @@ import Layout from '../components/layout';
 import HomeGrid from '../components/home-category-grid';
 import HomeProductGrid from '../components/home-product-grid';
 import HomeBlogGrid from '../components/home-blog-grid';
+import NewsletterCta from '../components/newsletter-cta'
+
 const fakeProducts = [
   {
     title: 'Teapot with black tea',
@@ -98,6 +100,7 @@ export default function IndexPage({ allPosts }) {
       </div>
       <HomeProductGrid fakeProducts={fakeProducts} />
       <HomeBlogGrid fakeBlog={fakeBlog} />
+      <NewsletterCta />
     </Layout>
   )
 }
