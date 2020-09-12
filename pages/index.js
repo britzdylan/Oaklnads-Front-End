@@ -1,4 +1,4 @@
-import { getAllPosts } from '../lib/api'
+import { getHomePagePosts } from '../lib/api'
 import Layout from '../components/layout';
 import HomeGrid from '../components/home-category-grid';
 import HomeProductGrid from '../components/home-product-grid';
@@ -99,14 +99,14 @@ export default function IndexPage({ allPosts }) {
           What sets us apart is that each custom or showroom piece is absolutely unique as we design and manufacture furniture according to our clients specifications.</p>
       </div>
       <HomeProductGrid fakeProducts={fakeProducts} />
-      <HomeBlogGrid fakeBlog={fakeBlog} />
+      <HomeBlogGrid allPosts={allPosts} />
       <NewsletterCta />
     </Layout>
   )
 }
 
 export async function getStaticProps() {
-  const allPosts = (await getAllPosts()) || []
+  const allPosts = (await getHomePagePosts()) || []
   return {
     props: { allPosts }
   }

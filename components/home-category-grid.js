@@ -8,27 +8,27 @@ export default function HomeGrid() {
         {
             src: "https://live.hasthemes.com/html/7/helendo-preview/helendo/assets/images/banners/h-g-1.jpg",
             span: '1',
-            Title: 'Category Name',
+            Title: 'Accessories',
         },
         {
             src: "https://live.hasthemes.com/html/7/helendo-preview/helendo/assets/images/banners/h-g-2.jpg",
             span: '2',
-            Title: 'Category Name',
+            Title: 'Bedroom Suites',
         },
         {
             src: "https://live.hasthemes.com/html/7/helendo-preview/helendo/assets/images/banners/h-g-1.jpg",
             span: '1',
-            Title: 'Category Name',
+            Title: 'Dining Chairs',
         },
         {
             src: "https://live.hasthemes.com/html/7/helendo-preview/helendo/assets/images/banners/h-g-5.jpg",
             span: '2',
-            Title: 'Category Name',
+            Title: 'Loung Suites',
         },
         {
             src: "https://live.hasthemes.com/html/7/helendo-preview/helendo/assets/images/banners/h-g-5.jpg",
             span: '2',
-            Title: 'Category Name',
+            Title: 'Pedastals',
         }
     ];
     return (
