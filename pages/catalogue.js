@@ -2,6 +2,8 @@ import Layout from '../components/layout';
 import Link from 'next/link';
 import { AiOutlinePlus, AiOutlineArrowRight } from 'react-icons/ai';
 import ReactTooltip from 'react-tooltip';
+import HeadSection from '../components/head-section'
+
 const fakeProducts = [
     {
         title: 'Teapot with black tea',
@@ -58,10 +60,7 @@ export default function Catalogue() {
 
     return (
         <Layout>
-            <div className="flex flex-row justify-between w-full items-center p-10 bg-gray-200 mb-20">
-                <h1 className="text-4xl font-bold">Catalogue</h1>
-                <p className="text-sm text-gray-600 tracking-wider"><Link href="/">HOME</Link> / CATALOGUE</p>
-            </div>
+            <HeadSection Title="Catalogue"/>
             <div className="md:flex flex-row justify-between mb-20 text-center md:text-left px-10 xl:px-0">
                 <div>
                     <h3 className="text-xl mb-5 font-medium">Categories</h3>

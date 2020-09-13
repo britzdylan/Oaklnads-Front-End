@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function SocialIcons() {
 
     return (
-        <div className="flex flex-row content-center justify-between md:w-full w-1/2 cursor-pointer">
+        <div className="flex flex-row content-center justify-evenly md:w-full w-1/2 cursor-pointer">
             <Link href="#">
                 <FaFacebookF size="1.2em" />
             </Link>

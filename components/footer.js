@@ -15,19 +15,18 @@ export default function Footer() {
                 <div className="mb-5 mt-5 md:mb-0">
                     <h6 className="font-bold text-xl mb-5">Help & Information</h6>
                     <ul className="appearance-none leading-8 cursor-pointer">
-                        <Link href="#"><li>Help & Contact Us</li></Link>
-                        <Link href="#"><li>Returns & Refunds </li></Link>
-                        <Link href="#"><li>Shipping</li></Link>
-                        <Link href="#"><li>Terms & Conditions</li></Link>
+                        <Link href="#"><li className="transition-all duration-500 ease-in-out hover:text-gray-500">Privacy Policy</li></Link>
+                        <Link href="#"><li className="transition-all duration-500 ease-in-out hover:text-gray-500">Shipping</li></Link>
+                        <Link href="#"><li className="transition-all duration-500 ease-in-out hover:text-gray-500">Terms & Conditions</li></Link>
                     </ul>
                 </div>
                 <div className="mb-5 mt-5 md:mb-0">
                     <h6 className="font-bold text-xl mb-5">About Us</h6>
                     <ul className="appearance-none leading-8 cursor-pointer">
-                        <Link href="#"><li>About us</li></Link>
-                        <Link href="#"><li>What we do</li></Link>
-                        <Link href="#"><li>FAQ Page</li></Link>
-                        <Link href="#"><li>Contact US</li></Link>
+                        <Link href="/about-us"><li className=" hover:text-gray-500 transition-all duration-500 ease-in-out">About us</li></Link>
+                        <Link href="/blog"><li className=" hover:text-gray-500 transition-all duration-500 ease-in-out">Blog</li></Link>
+                        <Link href="/faq"><li className=" hover:text-gray-500 transition-all duration-500 ease-in-out">FAQ Page</li></Link>
+                        <Link href="/contact"><li className=" hover:text-gray-500 transition-all duration-500 ease-in-out">Contact US</li></Link>
                     </ul>
                 </div>
                 <div className="mb-5 mt-5 md:mb-0">

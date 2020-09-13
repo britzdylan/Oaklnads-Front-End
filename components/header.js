@@ -15,15 +15,15 @@ export default function Nav() {
       </div>
 
       <div className="flex-grow">
-        <img src="./Logo.png" width="150px" alt="Oaklands Furniture and Design" className="lg:mx-auto" />
+        <Link href="/"><img src="./Logo.png" width="150px" alt="Oaklands Furniture and Design" className="lg:mx-auto cursor-pointer" /></Link>
       </div>
 
       <div className="w-auto  hidden lg:block ">
         <nav>
           <ul className="flex flex-row justify-between w-full">
-            <li className="mr-10 hover:font-bold text-gray-600 hover:text-gray-800 tracking-wide transition-all"><Link href="/catalogue">Catalogue</Link></li>
-            <li className="mr-10 hover:font-bold text-gray-600 hover:text-gray-800 tracking-wide transition-all"><Link href="/booking">Booking</Link></li>
-            <li className="mr-0 cursor-pointer hover:font-bold text-gray-600 hover:text-gray-800 tracking-wide transition-all"><Link href="/quote"><AiOutlineShoppingCart size='2em' /></Link></li>
+            <li className="mr-10  text-gray-600 hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out"><Link href="/catalogue">Catalogue</Link></li>
+            <li className="mr-10  text-gray-600 hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out"><Link href="/booking">Booking</Link></li>
+            <li className="mr-0 cursor-pointer  text-gray-600 hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out"><Link href="/quote"><AiOutlineShoppingCart size='2em' /></Link></li>
           </ul>
         </nav>
       </div>
