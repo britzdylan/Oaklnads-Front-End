@@ -1,0 +1,54 @@
+import Layout from '../components/layout'
+import HeadSection from '../components/head-section'
+import { getAllPosts, getAllCategories } from '../lib/api'
+import Link from 'next/link'
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import ReactMarkdown from 'react-markdown'
+
+export default function Blog({ allPosts, allCateogires }) {
+
+    return (
+        <Layout>
+            <HeadSection Title="Blog" />
+            <div className="md:flex flex-row justify-between mb-20 text-center md:text-left px-10 xl:px-0">
+                <div className="w-full md:w-3/4 mt-20 md:mt-0">
+                    {allPosts.blogPosts.map(post =>
+                        <div className="w-full px-5 lg:pr-5 lg:px-0 place-items-start py-5">
+                            <Link href={`/blog/${post.slug}`}>
+                                <div className="bg-gray-500 relative  cursor-pointer">
+                                    <img className="transition duration-500 ease-in-out hover:opacity-50" src={post.Cover.url} alt={post.title} width="100%" />
+                                </div>
+                            </Link>
+                            <div className="pt-3 mb-10">
+                                <Link href={`/blog/${post.slug}`}>
+                                    <h5 className="hover:text-gray-500 text-3xl font-bold cursor-pointer">{post.Title.charAt(0).toUpperCase() + post.Title.slice(1).toLowerCase()}</h5>
+                                </Link>
+                                <p className="block">By Oaklands design team</p>
+                                <Link href={`/categories/${post.blog_categories.length > 0 ? post.blog_categories[0].slug : '#'}`}><p className="cursor-pointer hover:text-gray-500">in {post.blog_categories.length > 0 ? post.blog_categories[0].Title : 'Design'}</p></Link>
+                            </div>
+                            <Link href={`/blog/${post.slug}`}><button className="bg-transparent hover:bg-gray-500 text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">Read More</button></Link>
+                        </div>
+                    )}
+                </div>
+                <div className="w-1/3 pl-5">
+                    <h3 className="text-xl mb-3 font-bold">Categories</h3>
+                    <hr />
+                    <ul className="text-sm leading-8 md:block flex flex-row flex-wrap justify-evenly">
+                        <Link href="/blog"><li className="cursor-pointer hover:text-gray-500">All</li></Link>
+                        {allCateogires.blogCategories.map(item =>
+                            <Link href={`/categories/${item.slug}`}><li key={item.id} className="cursor-pointer hover:text-gray-500">{item.Title}</li></Link>
+                        )}
+                    </ul>
+                </div>
+            </div>
+        </Layout>
+    )
+}
+
+export async function getStaticProps() {
+    const allPosts = (await getAllPosts()) || []
+    const allCateogires = (await getAllCategories()) || []
+    return {
+        props: { allPosts, allCateogires }
+    }
+}

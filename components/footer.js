@@ -12,14 +12,16 @@ export default function Footer() {
                     <Address />
                     <SocialIcons />
                 </div>
+
                 <div className="mb-5 mt-5 md:mb-0">
                     <h6 className="font-bold text-xl mb-5">Help & Information</h6>
                     <ul className="appearance-none leading-8 cursor-pointer">
-                        <Link href="#"><li className="transition-all duration-500 ease-in-out hover:text-gray-500">Privacy Policy</li></Link>
-                        <Link href="#"><li className="transition-all duration-500 ease-in-out hover:text-gray-500">Shipping</li></Link>
-                        <Link href="#"><li className="transition-all duration-500 ease-in-out hover:text-gray-500">Terms & Conditions</li></Link>
+                        <Link href="/policy"><li className="transition-all duration-500 ease-in-out hover:text-gray-500">Privacy Policy</li></Link>
+                        <Link href="/shipping"><li className="transition-all duration-500 ease-in-out hover:text-gray-500">Shipping</li></Link>
+                        <Link href="/terms"><li className="transition-all duration-500 ease-in-out hover:text-gray-500">Terms & Conditions</li></Link>
                     </ul>
                 </div>
+
                 <div className="mb-5 mt-5 md:mb-0">
                     <h6 className="font-bold text-xl mb-5">About Us</h6>
                     <ul className="appearance-none leading-8 cursor-pointer">
@@ -29,6 +31,7 @@ export default function Footer() {
                         <Link href="/contact"><li className=" hover:text-gray-500 transition-all duration-500 ease-in-out">Contact US</li></Link>
                     </ul>
                 </div>
+
                 <div className="mb-5 mt-5 md:mb-0">
                     <h6 className="font-bold text-xl mb-5">Newsletter</h6>
                     <div className="flex md:mt-0 mt-5 flex-row items-center bg-gray border-b">
@@ -37,6 +40,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+
             <div className="text-center py-5">
                 <h6 className="text-3xl font-bold mb-5">Oaklands Furniture & Design</h6>
                 <p>© 2020 Oaklands Furniture & Design. All Rights Reserved.</p>

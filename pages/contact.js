@@ -45,53 +45,53 @@ export default function Contact() {
             </div>
             {/* ---- */}
             <hr className="my-10" />
-                <div className="flex flex-row flex-wrap justify-between items-start">
-                    <div className="w-1/2">
-                        <h3 className="text-xl font-bold">Get in touch</h3>
+            <div className="flex flex-row flex-wrap justify-between items-start">
+                <div className="w-1/2">
+                    <h3 className="text-xl font-bold">Get in touch</h3>
                     <form class=" pt-6 pb-8 mb-4">
 
-                            <div class="mb-4">
+                        <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
                                 Name*
                             </label>
-                            <input class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="name" type="text" placeholder="Your first name"/>
-                            </div>
+                            <input class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="name" type="text" placeholder="Your first name" />
+                        </div>
 
-                            <div class="mb-4">
+                        <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                                 Email*
                             </label>
-                            <input class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="email" type="email" placeholder="Your emai address"/>
-                            </div>
+                            <input class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="email" type="email" placeholder="Your emai address" />
+                        </div>
 
-                            <div class="mb-4">
+                        <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="subject">
                                 Sibject*
                             </label>
-                            <input class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="subject" type="text" placeholder="Your subject"/>
-                            </div>
+                            <input class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="subject" type="text" placeholder="Your subject" />
+                        </div>
 
-                            <div class="mb-4">
+                        <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
                                 Message*
                             </label>
-                            <textarea class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="message"  type="text" placeholder="Your message..."/>
-                            </div>
+                            <textarea class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" rows="10" id="message" type="text" placeholder="Your message..." />
+                        </div>
 
-                            <div class="flex items-center justify-between">
-                            <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4  focus:outline-none focus:shadow-outline" type="button">
+                        <div class="flex items-center justify-between">
+                            <button class="bg-black hover:bg-gray-700 text-white font-light rounded py-2 px-4  focus:outline-none focus:shadow-outline" type="button">
                                 Send Message
                             </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div className="w-1/3">
-                            <p className="mb-20">Diverse Décor and Innovative Global Design Service offered too! Let us transform your living space</p>
-                            <p className="font-bold">Connect with us</p>
-                            <SocialLinks />
-                    </div>
+                        </div>
+                    </form>
                 </div>
+                <div className="w-1/3">
+                    <p className="mb-20">Diverse Décor and Innovative Global Design Service offered too! Let us transform your living space</p>
+                    <p className="font-bold">Connect with us</p>
+                    <SocialLinks />
+                </div>
+            </div>
         </Layout>
     )
-    
+
 }
