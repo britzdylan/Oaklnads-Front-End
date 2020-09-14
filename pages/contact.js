@@ -8,11 +8,11 @@ export default function Contact() {
         <Layout>
             <HeadSection Title="Contact Us" />
             {/* details */}
-            <div className="lg:flex text-center lg:text-left flex-row flex-wrap w-full py-10 justify-between items-center">
+            <div className="lg:flex text-center lg:text-left flex-row flex-wrap w-full py-5 justify-between items-start">
                 <div className="p-5">
                     <div className="flex flex-row justify-center lg:justify-start items-center mb-3">
                         <AiOutlineClockCircle size="2em" />
-                        <h3 className="ml-5">Open hours</h3>
+                        <h3 className="text-xl ml-5 leading-5 my-0">Open hours</h3>
                     </div>
                     <p>Mon - Fri: 08:00 - 16:00</p>
                     <p>Sat: 08:00 - 13:00</p>
@@ -21,15 +21,15 @@ export default function Contact() {
                 <div className="p-5">
                     <div className="flex flex-row justify-center lg:justify-start items-center mb-3">
                         <AiOutlinePhone size="2em" />
-                        <h3 className="ml-5">Phone number</h3>
+                        <h3 className="text-xl ml-5 leading-5 my-0">Phone number</h3>
                     </div>
                     <p>011 781 5569</p>
                 </div>
 
-                <div className="p-5">
+                <div className="p-5 ">
                     <div className="flex flex-row justify-center lg:justify-start items-center mb-3">
                         <AiOutlineMail size="2em" />
-                        <h3 className="ml-5">Our email</h3>
+                        <h3 className="text-xl ml-5 leading-5 my-0">Our email</h3>
                     </div>
                     <p>showroom@oaklandsfurniture.co.za</p>
                 </div>
@@ -37,7 +37,7 @@ export default function Contact() {
                 <div className="p-5">
                     <div className="flex flex-row justify-center lg:justify-start items-center mb-3">
                         <FaMapMarkerAlt size="2em" />
-                        <h3 className="ml-5">Our location</h3>
+                        <h3 className="text-xl ml-5 leading-5 my-0">Our location</h3>
                     </div>
                     <p>c/o Bramfiscer & Geaorge street</p>
                     <p>Bramfischer Shopping Centre</p>
@@ -50,36 +50,36 @@ export default function Contact() {
                     <h3 className="text-xl font-bold">Get in touch</h3>
                     <form class=" pt-6 pb-8 mb-4">
 
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                        <div className="mb-4">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
                                 Name*
                             </label>
-                            <input class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="name" type="text" placeholder="Your first name" />
+                            <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="name" type="text" placeholder="Your first name" />
                         </div>
 
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        <div className="mb-4">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" for="email">
                                 Email*
                             </label>
-                            <input class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="email" type="email" placeholder="Your emai address" />
+                            <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="email" type="email" placeholder="Your emai address" />
                         </div>
 
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="subject">
+                        <div className="mb-4">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" for="subject">
                                 Sibject*
                             </label>
-                            <input class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="subject" type="text" placeholder="Your subject" />
+                            <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="subject" type="text" placeholder="Your subject" />
                         </div>
 
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                        <div className="mb-4">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" for="message">
                                 Message*
                             </label>
-                            <textarea class="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" rows="10" id="message" type="text" placeholder="Your message..." />
+                            <textarea className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" rows="10" id="message" type="text" placeholder="Your message..." />
                         </div>
 
-                        <div class="flex items-center justify-between">
-                            <button class="bg-black hover:bg-gray-700 text-white font-light rounded py-2 px-4  focus:outline-none focus:shadow-outline" type="button">
+                        <div className="flex items-center justify-between">
+                            <button className="bg-black hover:bg-gray-700 text-white font-light rounded py-2 px-4  focus:outline-none focus:shadow-outline" type="button">
                                 Send Message
                             </button>
                         </div>
