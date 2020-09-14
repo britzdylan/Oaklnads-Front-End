@@ -3,7 +3,7 @@ import HeadSection from '../components/head-section'
 import { getAllPosts, getAllCategories } from '../lib/api'
 import Link from 'next/link'
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import ReactMarkdown from 'react-markdown'
+
 
 export default function Blog({ allPosts, allCateogires }) {
 
@@ -13,7 +13,7 @@ export default function Blog({ allPosts, allCateogires }) {
             <div className="md:flex flex-row justify-between mb-20 text-center md:text-left px-10 xl:px-0">
                 <div className="w-full md:w-3/4 mt-20 md:mt-0">
                     {allPosts.blogPosts.map(post =>
-                        <div className="w-full px-5 lg:pr-5 lg:px-0 place-items-start py-5">
+                        <div key={post.id} className="w-full px-5 lg:pr-5 lg:px-0 place-items-start py-5">
                             <Link href={`/blog/${post.slug}`}>
                                 <div className="bg-gray-500 relative  cursor-pointer">
                                     <img className="transition duration-500 ease-in-out hover:opacity-50" src={post.Cover.url} alt={post.title} width="100%" />

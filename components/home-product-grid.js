@@ -26,12 +26,12 @@ export default function HomeProductGrid({ fakeProducts }) {
                         </Link>
                         <div className="flex flex-row justify-between content-start pt-3">
                             <Link href={product.slug}>
-                                <h5 className="text-xl  cursor-pointer">{product.title}</h5>
+                                <h5 className="text-xl leading-4 my-0 cursor-pointer">{product.title}</h5>
                             </Link>
                             <ReactTooltip />
                             <button data-tip="Add to quote" className="bg-gray-500 p-2 rounded-sm" ><AiOutlinePlus size="1.5em" color="white" /></button>
                         </div>
-                        <small>{product.collection}</small>
+                        <small className="leading-4 my-0">{product.collection}</small>
 
                     </div>
 

@@ -37,8 +37,8 @@ export default function HomeGrid() {
                 <div key={data.Title + data.span} style={{ backgroundColor: '#F3F3F3' }} className={`col-span-6 md:col-span-${data.span} relative cursor-pointer hover:text-gray-600`}>
                     <img className="" src={`${data.src}`} alt={data.Title} />
                     <div className="absolute" style={{ top: "30px", left: "30px" }}>
-                        <h4 className="text-xl font-bold">{data.Title}</h4>
-                        <p>Collection</p>
+                        <h4 className="text-xl leading-5 my-0 font-bold">{data.Title}</h4>
+                        <p className="leading-4 my-0">Collection</p>
                     </div>
                 </div>
             )}
