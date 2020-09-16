@@ -5,7 +5,7 @@ import React from 'react'
 
 const SinglePost = ({ article }) => {
     const post = article.blogPosts[0]
-    console.log(post)
+
     return (
         <Layout>
             <article id="single-post mb-10">
@@ -13,11 +13,7 @@ const SinglePost = ({ article }) => {
                 <h1 className="font-bold mt-20 p-5 text-left text-gray-700">{post.Title}</h1>
                 <p className="p-5">By Oaklands Design Team</p>
                 <div className="w-full p-5 md:p-10 lg:p-20 lg:w-8/12 mx-auto mb-20">
-
-
-
-
-                    <ReactMarkdown source={post.Content} />
+                <ReactMarkdown source={post.Content} />
                 </div>
             </article>
 

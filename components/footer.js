@@ -27,7 +27,6 @@ export default function Footer() {
                     <ul className="appearance-none leading-8 cursor-pointer">
                         <Link href="/about-us"><li className=" hover:text-gray-500 transition-all duration-500 ease-in-out">About us</li></Link>
                         <Link href="/blog"><li className=" hover:text-gray-500 transition-all duration-500 ease-in-out">Blog</li></Link>
-                        <Link href="/faq"><li className=" hover:text-gray-500 transition-all duration-500 ease-in-out">FAQ Page</li></Link>
                         <Link href="/contact"><li className=" hover:text-gray-500 transition-all duration-500 ease-in-out">Contact US</li></Link>
                     </ul>
                 </div>

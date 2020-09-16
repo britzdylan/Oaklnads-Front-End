@@ -2,7 +2,6 @@ import Layout from '../components/layout'
 import HeadSection from '../components/head-section'
 import { getAllPosts, getAllCategories } from '../lib/api'
 import Link from 'next/link'
-import { AiOutlineArrowRight } from 'react-icons/ai';
 
 
 export default function Blog({ allPosts, allCateogires }) {
@@ -13,7 +12,7 @@ export default function Blog({ allPosts, allCateogires }) {
             <div className="md:flex flex-row justify-between mb-20 text-center md:text-left px-10 xl:px-0">
                 <div className="w-full md:w-3/4 mt-20 md:mt-0">
                     {allPosts.blogPosts.map(post =>
-                        <div key={post.id} className="w-full px-5 lg:pr-5 lg:px-0 place-items-start py-5">
+                        <div key={post.id} className="w-full px-5 lg:pr-5 lg:px-0 place-items-start py-5 mb-20">
                             <Link href={`/blog/${post.slug}`}>
                                 <div className="bg-gray-500 relative  cursor-pointer">
                                     <img className="transition duration-500 ease-in-out hover:opacity-50" src={post.Cover.url} alt={post.title} width="100%" />
@@ -21,12 +20,12 @@ export default function Blog({ allPosts, allCateogires }) {
                             </Link>
                             <div className="pt-3 mb-10">
                                 <Link href={`/blog/${post.slug}`}>
-                                    <h5 className="hover:text-gray-500 text-3xl font-bold cursor-pointer">{post.Title.charAt(0).toUpperCase() + post.Title.slice(1).toLowerCase()}</h5>
+                                    <h5 className="hover:text-gray-500 text-3xl mb-5 mt-0 leading-10 font-bold cursor-pointer">{post.Title.charAt(0).toUpperCase() + post.Title.slice(1).toLowerCase()}</h5>
                                 </Link>
-                                <p className="block">By Oaklands design team</p>
-                                <Link href={`/categories/${post.blog_categories.length > 0 ? post.blog_categories[0].slug : '#'}`}><p className="cursor-pointer hover:text-gray-500">in {post.blog_categories.length > 0 ? post.blog_categories[0].Title : 'Design'}</p></Link>
+                                <p className="block mb-10 leading-4 text-sm tracking-wider"> October 16, 2020 / By Oaklands design team / in {post.blog_categories.length > 0 ? post.blog_categories[0].Title : 'Design'}</p>
+                                <p>Contrary to popular belief, Lorem Ipsum indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in…</p>
                             </div>
-                            <Link href={`/blog/${post.slug}`}><button className="bg-transparent hover:bg-gray-500 text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded">Read More</button></Link>
+                            <Link href={`/blog/${post.slug}`}><button className="bg-transparent hover:bg-gray-100 text-sm text-black font-semibold hover:text-black py-2 px-4 border border-black hover:border-black">Read More</button></Link>
                         </div>
                     )}
                 </div>

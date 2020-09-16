@@ -79,13 +79,13 @@ export default function Catalogue() {
                         {fakeProducts.map(product =>
 
                             <div className="w-full px-5 lg:pr-5 lg:px-0 place-items-start md:w-1/2 lg:w-1/3 py-5">
-                                <Link href={product.slug}>
+                                <Link href={`catalogue/${product.slug}`}>
                                     <div className="bg-gray-500 relative  cursor-pointer">
                                         <img className="transition duration-500 ease-in-out hover:opacity-50" src={product.image} alt={product.title} width="100%" />
                                     </div>
                                 </Link>
                                 <div className="flex flex-row justify-between content-start pt-3">
-                                    <Link href={product.slug}>
+                                    <Link href={`catalogue/${product.slug}`}>
                                         <h5 className="text-xl leading-5 my-0 cursor-pointer">{product.title}</h5>
                                     </Link>
                                     <ReactTooltip />
