@@ -14,8 +14,8 @@ export default function Contact() {
                         <AiOutlineClockCircle size="2em" />
                         <h3 className="text-xl ml-5 leading-5 my-0">Open hours</h3>
                     </div>
-                    <p>Mon - Fri: 08:00 - 16:00</p>
-                    <p>Sat: 08:00 - 13:00</p>
+                    <p className="mb-1" >Mon - Fri: 08:00 - 16:00</p>
+                    <p className="mb-1" >Sat: 08:00 - 13:00</p>
                 </div>
 
                 <div className="p-5">
@@ -39,7 +39,7 @@ export default function Contact() {
                         <FaMapMarkerAlt size="2em" />
                         <h3 className="text-xl ml-5 leading-5 my-0">Our location</h3>
                     </div>
-                    <p>c/o Bramfiscer & Geaorge street</p>
+                    <p>c/o Bramfiscer & George street</p>
                     <p>Bramfischer Shopping Centre</p>
                 </div>
             </div>
@@ -48,40 +48,38 @@ export default function Contact() {
             <div className="flex flex-row flex-wrap justify-between items-start">
                 <div className="w-1/2">
                     <h3 className="text-xl font-bold">Get in touch</h3>
-                    <form class=" pt-6 pb-8 mb-4">
+                    <form action="https://formspree.io/xgepekka" method="POST"className=" pt-6 pb-8 mb-4">
 
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
                                 Name*
                             </label>
-                            <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="name" type="text" placeholder="Your first name" />
+                            <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="name" type="text" name="name" placeholder="Your first name" />
                         </div>
 
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-bold mb-2" for="email">
                                 Email*
                             </label>
-                            <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="email" type="email" placeholder="Your emai address" />
+                            <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="email" name="_replyto" type="email" placeholder="Your emai address" />
                         </div>
 
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-bold mb-2" for="subject">
                                 Sibject*
                             </label>
-                            <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="subject" type="text" placeholder="Your subject" />
+                            <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" id="subject" name="subject" type="text" placeholder="Your subject" />
                         </div>
 
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-bold mb-2" for="message">
                                 Message*
                             </label>
-                            <textarea className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" rows="10" id="message" type="text" placeholder="Your message..." />
+                            <textarea className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" rows="10" name="message" id="message" type="text" placeholder="Your message..." />
                         </div>
 
                         <div className="flex items-center justify-between">
-                            <button className="bg-black hover:bg-gray-700 text-white font-light rounded py-2 px-4  focus:outline-none focus:shadow-outline" type="button">
-                                Send Message
-                            </button>
+                            <input className="bg-black hover:bg-gray-700 text-white font-light rounded py-2 px-4  focus:outline-none focus:shadow-outline" value="send message" type="submit"/>
                         </div>
                     </form>
                 </div>

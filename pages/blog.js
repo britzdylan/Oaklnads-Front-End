@@ -6,6 +6,7 @@ import Link from 'next/link'
 
 export default function Blog({ allPosts, allCateogires }) {
 
+
     return (
         <Layout>
             <HeadSection Title="Blog" />
@@ -20,10 +21,10 @@ export default function Blog({ allPosts, allCateogires }) {
                             </Link>
                             <div className="pt-3 mb-10">
                                 <Link href={`/blog/${post.slug}`}>
-                                    <h5 className="hover:text-gray-500 text-3xl mb-5 mt-0 leading-10 font-bold cursor-pointer">{post.Title.charAt(0).toUpperCase() + post.Title.slice(1).toLowerCase()}</h5>
+                                    <h5 className="hover:text-gray-500 text-3xl mb-1 mt-0 leading-10 font-bold cursor-pointer">{post.Title.charAt(0).toUpperCase() + post.Title.slice(1).toLowerCase()}</h5>
                                 </Link>
-                                <p className="block mb-10 leading-4 text-sm tracking-wider"> October 16, 2020 / By Oaklands design team / in {post.blog_categories.length > 0 ? post.blog_categories[0].Title : 'Design'}</p>
-                                <p>Contrary to popular belief, Lorem Ipsum indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in…</p>
+                                <p className="block mb-5 leading-4 text-sm tracking-wider">By Oaklands design team / in {post.blog_categories.length > 0 ? post.blog_categories[0].Title : 'Design'}</p>
+                                <p className="my-2 text-xl">{post.excerpt}</p>
                             </div>
                             <Link href={`/blog/${post.slug}`}><button className="bg-transparent hover:bg-gray-100 text-sm text-black font-semibold hover:text-black py-2 px-4 border border-black hover:border-black">Read More</button></Link>
                         </div>
@@ -33,9 +34,12 @@ export default function Blog({ allPosts, allCateogires }) {
                     <h3 className="text-xl mb-3 font-bold">Categories</h3>
                     <hr />
                     <ul className="text-sm leading-8 md:block flex flex-row flex-wrap justify-evenly">
-                        <Link href="/blog"><li className="cursor-pointer hover:text-gray-500">All</li></Link>
+                        <Link href="/blog"><li className=" font-bold cursor-pointer hover:text-gray-500">All</li></Link>
                         {allCateogires.blogCategories.map(item =>
-                            <Link href={`/categories/${item.slug}`}><li key={item.id} className="cursor-pointer hover:text-gray-500">{item.Title}</li></Link>
+                            <Link href={{
+                                pathname: `/blog/category/${item.slug}`,
+                                query: { id: `${item.id}` },
+                              }}><li key={item.id} className="cursor-pointer hover:text-gray-500">{item.Title}</li></Link>
                         )}
                     </ul>
                 </div>

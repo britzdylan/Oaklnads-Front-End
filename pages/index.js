@@ -1,4 +1,4 @@
-import { getHomePagePosts } from '../lib/api'
+import { getHomePagePosts,getAllProducts } from '../lib/api'
 import Layout from '../components/layout';
 import HomeGrid from '../components/home-category-grid';
 import HomeProductGrid from '../components/home-product-grid';
@@ -85,7 +85,7 @@ const fakeBlog = [
 ]
 
 
-export default function IndexPage({ allPosts }) {
+export default function IndexPage({ allPosts, allProducts }) {
 
   return (
     <Layout>
@@ -98,8 +98,8 @@ export default function IndexPage({ allPosts }) {
         Patterns are an attraction for all those who possess style, sophistication and a desire to be unique.
           What sets us apart is that each custom or showroom piece is absolutely unique as we design and manufacture furniture according to our clients specifications.</p>
       </div>
-      <HomeProductGrid fakeProducts={fakeProducts} />
-      <HomeBlogGrid allPosts={allPosts} />
+      <HomeProductGrid allProducts={allProducts} />
+      <HomeBlogGrid title="Read our blog" allPosts={allPosts} />
       <NewsletterCta />
     </Layout>
   )
@@ -107,7 +107,8 @@ export default function IndexPage({ allPosts }) {
 
 export async function getStaticProps() {
   const allPosts = (await getHomePagePosts()) || []
+  const allProducts = (await getAllProducts()) || []
   return {
-    props: { allPosts }
+    props: { allPosts, allProducts }
   }
 }

@@ -21,8 +21,8 @@ export default function Nav() {
       <div className="w-auto  hidden lg:block ">
         <nav>
           <ul className="flex flex-row justify-between w-full">
-            <Link href="/catalogue"><li className="mr-10  text-gray-600 hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out">Catalogue</li></Link>
-            <Link href="/booking"><li className="mr-10  text-gray-600 hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out">Booking</li></Link>
+            <Link href="/catalogue"><li className="mr-10 cursor-pointer  text-gray-600 hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out">Catalogue</li></Link>
+            <Link href="/booking"><li className="mr-10  cursor-pointer text-gray-600 hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out">Booking</li></Link>
             <Link href="/quote"><li className="mr-0 cursor-pointer  text-gray-600 hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out"><AiOutlineShoppingCart size='2em' /></li></Link>
           </ul>
         </nav>

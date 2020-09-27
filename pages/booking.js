@@ -17,15 +17,14 @@ export default function Booking() {
                 <p className="text-xl">Setup an apointment with our expert designers to help get your vision on a board and turn your dream of a home into a reality.</p>
             </div>
 
-            <form class="w-full max-w-lg mx-auto my-20">
+            <form action="https://formspree.io/mzbkbrgb" method="POST" class="w-full max-w-lg mx-auto my-20">
                 <div class="flex flex-wrap -mx-3 mb-6">
                     
                     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                         First Name
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane"/>
-                    <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+                    <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" name="first name" required id="grid-first-name" type="text" placeholder="Jane"/>
                     </div>
 
 
@@ -33,7 +32,7 @@ export default function Booking() {
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                         Last Name
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"/>
+                    <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" name="last name" required id="grid-last-name" type="text" placeholder="Doe"/>
                     </div>
                 </div>
 
@@ -42,7 +41,7 @@ export default function Booking() {
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                         Contact Number
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="number" placeholder="******************"/>
+                    <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" name="contact" required id="grid-password" type="number" placeholder="******************"/>
                     </div>
                 </div>
 
@@ -50,13 +49,24 @@ export default function Booking() {
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                         Email
                     </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="email" placeholder="example@gmail.com"/>
+                    <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" name="_replyto" required id="grid-city" type="email" placeholder="example@gmail.com"/>
                     </div>
 
-                    <button className="bg-black hover:bg-gray-700 text-white font-light rounded py-2 px-4  focus:outline-none focus:shadow-outline" type="button">
-                                Submit your booking
-                    </button>
-                    
+                    <div class="w-full   mb-6 md:mb-8">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="date">
+                        Date
+                    </label>
+                    <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" name="date" required id="date" type="date" />
+                    </div>
+
+                    <div class="w-full   mb-6 md:mb-8">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="time">
+                        Time
+                    </label>
+                    <input className="appearance-none border  w-full py-2 px-3 text-gray-700 focus:outline-none" name="time" required id="time" type="time" />
+                    </div>
+
+                    <input className="bg-black hover:bg-gray-700 text-white font-light rounded py-2 px-4  focus:outline-none focus:shadow-outline" type="submit"/> 
                 </form>
             
         </Layout>   

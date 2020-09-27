@@ -1,16 +1,16 @@
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import Link from 'next/link';
 
-export default function HomeBlogGrid({ allPosts }) {
+export default function HomeBlogGrid({ allPosts, title }) {
 
     return (
         <div className="md:p-20 p-1 xl:p-0 my-40 w-full mx-auto">
-            <div className="md:flex flex-row justify-between mb-10">
-                <h4 className="font-bold text-3xl">Read our Blog</h4>
-                <Link href="#">
-                    <div className="flex flex-row justify-between items-center cursor-pointer">
-
-                        <p className="font-bold mr-2">View All </p>
+            <div className="md:flex flex-row justify-between items-center mb-10">
+                <h4 className="font-bold text-3xl">{title}</h4>
+                <Link href="/blog">
+                    <div className="flex hover:text-gray-600 flex-row justify-between items-center cursor-pointer">
+                        
+                        <p className="font-bold my-0 leading-0 mr-2">View All </p>
                         <AiOutlineArrowRight size="2em" />
 
                     </div>
