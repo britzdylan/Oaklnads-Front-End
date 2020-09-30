@@ -17,7 +17,7 @@ export default function HomeBlogGrid({ allPosts, title }) {
                 </Link>
             </div>
             <div id="container-collection" className="md:flex flex-row flex-wrap mx-auto" >
-                {allPosts.blogPosts.map(post =>
+                {allPosts != undefined ? allPosts.blogPosts.map(post =>
 
                     <div key={post.Title} className="w-full px-5 lg:pr-5 lg:px-0 place-items-start md:w-1/3 py-5">
                         <Link href={`/blog/${post.slug}`}>
@@ -38,7 +38,7 @@ export default function HomeBlogGrid({ allPosts, title }) {
 
                     </div>
 
-                )}
+                ) : <p>Oops something went wrong</p>}
             </div>
         </div >
     )

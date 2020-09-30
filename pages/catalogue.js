@@ -75,7 +75,7 @@ export default function Catalogue({ allProducts, productCategories }) {
                 <div className="w-full md:w-9/12 mt-20 md:mt-0">
                     <p className="text-regular">{`Showing 1-8 of ${allProducts.products.length} Products`}</p>
                     <div id="container-collection" className="md:flex flex-row flex-wrap " >
-                        {allProducts.products.map(product =>
+                        {allProducts != undefined ? allProducts.products.map(product =>
 
                             <div key={product.id} className="w-full px-5 lg:pr-5 lg:px-0 place-items-start md:w-1/2 lg:w-1/3 py-5">
                                 <Link href={`/catalogue/${product.slug}`}>
@@ -92,7 +92,7 @@ export default function Catalogue({ allProducts, productCategories }) {
                                 </div>
                                 <small>{product.product_category.Title}</small>
                             </div>
-                        )}
+                        ) : <p>Oops something went wrong</p>}
                     </div>
                 </div>
             </div>

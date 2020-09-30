@@ -106,7 +106,7 @@ async function submitQuote(e) {
                     <HeadSection Title="Request a quote" />
                     <div>
                         <p>You have {quoteItems.length} item/s in your cart</p>
-                        {quoteItems.map((item,index) => 
+                        {quoteItems != undefined ? quoteItems.map((item,index) => 
                         
                         <div key={index} className="w-3/4 flex flex-row justify-between items-top bg-gray-200 rounded p-5 mx-auto mb-5">
                             <div className="w-20">
@@ -122,7 +122,7 @@ async function submitQuote(e) {
         
                         </div>
                         
-                        )}
+                        ) : <p>Oops something went wrong</p>}
                         
 
                         

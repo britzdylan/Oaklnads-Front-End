@@ -12,7 +12,7 @@ export default function Blog({ allPosts, allCateogires }) {
             <HeadSection Title="Blog" />
             <div className="md:flex flex-row justify-between mb-20 text-center md:text-left px-10 xl:px-0">
                 <div className="w-full md:w-3/4 mt-20 md:mt-0">
-                    {allPosts.blogPosts.map(post =>
+                    {allPosts != undefined ? allPosts.blogPosts.map(post =>
                         <div key={post.id} className="w-full px-5 lg:pr-5 lg:px-0 place-items-start py-5 mb-20">
                             <Link href={`/blog/${post.slug}`}>
                                 <div className="bg-gray-500 relative  cursor-pointer">
@@ -28,19 +28,19 @@ export default function Blog({ allPosts, allCateogires }) {
                             </div>
                             <Link href={`/blog/${post.slug}`}><button className="bg-transparent hover:bg-gray-100 text-sm text-black font-semibold hover:text-black py-2 px-4 border border-black hover:border-black">Read More</button></Link>
                         </div>
-                    )}
+                    ) : <p>Oops something went wrong</p>}
                 </div>
                 <div className="w-1/3 pl-5">
                     <h3 className="text-xl mb-3 font-bold">Categories</h3>
                     <hr />
                     <ul className="text-sm leading-8 md:block flex flex-row flex-wrap justify-evenly">
                         <Link href="/blog"><li className=" font-bold cursor-pointer hover:text-gray-500">All</li></Link>
-                        {allCateogires.blogCategories.map(item =>
+                        {allCategories != undefined ? allCateogires.blogCategories.map(item =>
                             <Link href={{
                                 pathname: `/blog/category/${item.slug}`,
                                 query: { id: `${item.id}` },
                               }}><li key={item.id} className="cursor-pointer hover:text-gray-500">{item.Title}</li></Link>
-                        )}
+                        ) : <p>Oops something went wrong</p>}
                     </ul>
                 </div>
             </div>

@@ -121,7 +121,7 @@ const returnItemThatExits = (arr, slug) => {
             <div className="my-20">
                 <h3 className="font-bold text-lg text-center">Related Products</h3>
                 <div className="flex flex-row flex-wrap w-full">
-                {allProducts.products.map(product => 
+                {allProducts != undefined ? allProducts.products.map(product => 
                 <div className="w-full px-5 lg:pr-5 lg:px-0 place-items-start md:w-1/2 lg:w-1/3 xl:w-1/4 py-5">
                         <Link prefetch={false} href={`/catalogue/${product.slug}`}>
                             <div className="bg-gray-500 relative  cursor-pointer">
@@ -138,7 +138,7 @@ const returnItemThatExits = (arr, slug) => {
                         <small className="leading-4 my-0">{product.product_category.Title}</small>
 
                     </div>
-                )}
+                ) : <p>Oops something went wrong</p>}
                 </div>
             </div>
         </Layout>

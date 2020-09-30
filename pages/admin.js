@@ -34,7 +34,7 @@ export default function Admin({ allQuotes }) {
         <Layout>
             { correct ? 
             <div>
-            {allQuotes.quotes.map(item => 
+            {allQuotes != undefined ? allQuotes.quotes.map(item => 
                 <div key={item.id} className="w-3/4 flex flex-row justify-start items-center bg-gray-200 rounded p-5 mx-auto mb-5">
                 <div className="w-40">
                     <p>Quote #</p>
@@ -51,7 +51,7 @@ export default function Admin({ allQuotes }) {
 
             </div>
                     
-                    )}
+                    ) : <p>Oops something went wrong</p>}
             </div>
                 
                 :

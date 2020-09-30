@@ -17,7 +17,7 @@ export default function HomeProductGrid({ allProducts }) {
                 </Link>
             </div>
             <div id="container-collection" className="md:flex flex-row flex-wrap " >
-                {allProducts.products.map(product =>
+                {allProducts != undefined ? allProducts.products.map(product =>
 
                     <div className="w-full px-5 lg:pr-5 lg:px-0 place-items-start md:w-1/2 lg:w-1/3 xl:w-1/4 py-5">
                         <Link href={`catalogue/${product.slug}`}>
@@ -36,7 +36,7 @@ export default function HomeProductGrid({ allProducts }) {
 
                     </div>
 
-                )}
+                ) : <p>oops something went wrong</p>}
             </div>
         </div >
     )
