@@ -101,11 +101,11 @@ export default function Catalogue({ allProducts, productCategories }) {
 }
 
 
-// export async function getStaticProps() {
+export async function getStaticProps() {
 
-//     const allProducts = (await getAllProducts()) || []
-//     const productCategories = (await getAllProductCategories()) || []
-//     return {
-//       props: { allProducts, productCategories }
-//     }
-//   }
+    const allProducts = (await getAllProducts()) || []
+    const productCategories = (await getAllProductCategories()) || []
+    return {
+      props: { allProducts, productCategories }
+    }
+  }
