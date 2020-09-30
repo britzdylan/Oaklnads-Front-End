@@ -35,7 +35,7 @@ export default function Blog({ allPosts, allCateogires }) {
                     <hr />
                     <ul className="text-sm leading-8 md:block flex flex-row flex-wrap justify-evenly">
                         <Link href="/blog"><li className=" font-bold cursor-pointer hover:text-gray-500">All</li></Link>
-                        {allCategories != undefined ? allCateogires.blogCategories.map(item =>
+                        {allCateogires != undefined ? allCateogires.blogCategories.map(item =>
                             <Link href={{
                                 pathname: `/blog/category/${item.slug}`,
                                 query: { id: `${item.id}` },
