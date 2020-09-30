@@ -67,9 +67,9 @@ export default function Catalogue({ allProducts, productCategories }) {
                     <h3 className="text-xl mb-5 font-medium">Categories</h3>
                     <ul className="text-sm leading-8 md:block flex flex-row flex-wrap justify-evenly">
                         <Link href="/catalogue"><li className="cursor-pointer font-bold hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out">All</li></Link>
-                        {productCategories.productCategories.map( category =>
+                        {productCategories != undefined ? productCategories.productCategories.map( category =>
                         <Link href={`/catalogue/category/${category.slug}`}><li key={category.id} className="cursor-pointer hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out">{category.Title}</li></Link>
-                            )}
+                            ) : <p>Oops something went wrong</p>}
                     </ul>
                 </div>
                 <div className="w-full md:w-9/12 mt-20 md:mt-0">
