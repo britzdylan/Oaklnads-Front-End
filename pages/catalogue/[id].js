@@ -74,7 +74,7 @@ const returnItemThatExits = (arr, slug) => {
 
     function addToQuote() {
         if (quote.length == 0) {
-            quote.push(product);
+            quote.push(getProduct.products[0]);
             localStorage.setItem('quote', JSON.stringify(quote))
         
             setMsg('item added to quote')

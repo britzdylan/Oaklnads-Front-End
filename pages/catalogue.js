@@ -68,7 +68,7 @@ export default function Catalogue({ allProducts, productCategories }) {
                     <ul className="text-sm leading-8 md:block flex flex-row flex-wrap justify-evenly">
                         <Link href="/catalogue"><li className="cursor-pointer font-bold hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out">All</li></Link>
                         {productCategories.productCategories.map( category =>
-                        <Link href={`catalogue/category/${category.slug}`}><li key={category.id} className="cursor-pointer hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out">{category.Title}</li></Link>
+                        <Link href={`/catalogue/category/${category.slug}`}><li key={category.id} className="cursor-pointer hover:text-black hover:scale-105 transform tracking-wide transition-all duration-500 ease-in-out">{category.Title}</li></Link>
                             )}
                     </ul>
                 </div>
@@ -78,17 +78,17 @@ export default function Catalogue({ allProducts, productCategories }) {
                         {allProducts.products.map(product =>
 
                             <div key={product.id} className="w-full px-5 lg:pr-5 lg:px-0 place-items-start md:w-1/2 lg:w-1/3 py-5">
-                                <Link href={`catalogue/${product.slug}`}>
+                                <Link href={`/catalogue/${product.slug}`}>
                                     <div className="bg-gray-500 relative  cursor-pointer">
                                         <img className="transition duration-500 ease-in-out hover:opacity-50" src={product.Image.url} alt={product.Title} width="100%" />
                                     </div>
                                 </Link>
                                 <div className="flex flex-row justify-between content-start pt-3">
-                                    <Link href={`catalogue/${product.slug}`}>
+                                    <Link href={`/catalogue/${product.slug}`}>
                                         <h5 className="text-xl leading-5 my-0 cursor-pointer">{product.Title}</h5>
                                     </Link>
                                     <ReactTooltip />
-                                    <Link href={`catalogue/${product.slug}`}><a data-tip="Add to quote" className="bg-gray-500 p-2 rounded-sm" ><AiOutlinePlus size="1.5em" color="white" /></a></Link>
+                                    <Link href={`/catalogue/${product.slug}`}><a data-tip="Add to quote" className="bg-gray-500 p-2 rounded-sm" ><AiOutlinePlus size="1.5em" color="white" /></a></Link>
                                 </div>
                                 <small>{product.product_category.Title}</small>
                             </div>
@@ -101,11 +101,11 @@ export default function Catalogue({ allProducts, productCategories }) {
 }
 
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
 
-    const allProducts = (await getAllProducts()) || []
-    const productCategories = (await getAllProductCategories()) || []
-    return {
-      props: { allProducts, productCategories }
-    }
-  }
+//     const allProducts = (await getAllProducts()) || []
+//     const productCategories = (await getAllProductCategories()) || []
+//     return {
+//       props: { allProducts, productCategories }
+//     }
+//   }
